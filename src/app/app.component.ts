@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { MiComponenteComponent } from './mi-componente/mi-componente.component';
-
-
+import { PostCreateComponent } from './Posts/post-create/post-create.component';
+import { HeaderComponent } from './header/header.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [MiComponenteComponent],
+  imports: [PostCreateComponent, HeaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
