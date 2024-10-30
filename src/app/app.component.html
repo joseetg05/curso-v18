@@ -3,6 +3,7 @@
         <app-header></app-header>
     </header>
     <section class="content" style="padding-top: 20px;">
-        <app-post-create></app-post-create>
+        <app-post-create (postCreated)="onPostAdded($event)"></app-post-create>
+        <app-post-list [posts]="storedPosts"></app-post-list>
     </section>
 </main>
