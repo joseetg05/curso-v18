@@ -1,17 +1,40 @@
-<mat-card style="align-items: center; padding-top: 10px;" >
-    <form (submit)="onAddPost(postForm)" #postForm="ngForm">
-        <div>
-            <mat-form-field >
-                <input matInput type="text" name="title" ngModel required minlength="3" #title="ngModel"><mat-error *ngIf="title.invalid == true">Please, fill this space</mat-error>  
-            </mat-form-field>
-        </div>   
-        <div>
-            <mat-form-field>
-                <textarea matInput rows="6" name="content" ngModel required #title="ngModel" #content="ngModel"></textarea> <mat-error *ngIf="content.invalid == true">Please, fill this space</mat-error>  
-            </mat-form-field>
-        </div>
-        <div>
-            <button mat-raised-button color="accent" type="submit">Save post</button> 
-        </div>                                  
-    </form>
+<mat-card style="align-items: center; padding-top: 10px">
+  <form (submit)="onAddPost(postForm)" #postForm="ngForm">
+    <div>
+      <mat-form-field>
+        <input
+          matInput
+          type="text"
+          name="title"
+          ngModel
+          required
+          minlength="3"
+          placeholder="Post Title"
+          #title="ngModel"
+        /><mat-error *ngIf="title.invalid == true"
+          >Please, fill this space</mat-error
+        >
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <textarea
+          matInput
+          rows="6"
+          name="content"
+          ngModel
+          required
+          placeholder="Post Content"
+          #title="ngModel"
+          #content="ngModel"
+        ></textarea>
+        <mat-error *ngIf="content.invalid == true"
+          >Please, fill this space</mat-error
+        >
+      </mat-form-field>
+    </div>
+    <div>
+      <button mat-raised-button color="accent" type="submit">Save post</button>
+    </div>
+  </form>
 </mat-card>
